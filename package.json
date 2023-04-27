@@ -1,0 +1,20 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch styles/sass/main.scss styles/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mat-Kon/virtual-keyboard.git"
+  },
+  "author": "Mat-Kon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mat-Kon/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/Mat-Kon/virtual-keyboard#readme"
+}
