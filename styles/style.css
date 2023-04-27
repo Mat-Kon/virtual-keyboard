@@ -13,7 +13,7 @@
 .text-window {
   width: 50%;
   min-height: 15rem;
-  margin: 1rem auto;
+  margin: 2rem auto;
   border: rgb(38, 36, 36) 3px solid;
   border-radius: 10px;
   resize: none;
@@ -27,6 +27,14 @@
   border: rgb(38, 36, 36) 3px solid;
   border-radius: 20px;
   background-color: rgb(233, 251, 151);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+}
+
+.keyboard_rows {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  padding: 5px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
