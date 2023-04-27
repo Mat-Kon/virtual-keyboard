@@ -1,0 +1,9 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 15rem;
+    border: $color-letter 3px solid;
+    border-radius: 20px;
+    background-color: $color-keyboard;
+}

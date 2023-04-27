@@ -1,3 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
 
+.heading {
+  text-align: center;
+  color: rgb(53, 60, 145);
+}
+
+.text-window {
+  width: 50%;
+  min-height: 15rem;
+  margin: 1rem auto;
+  border: rgb(38, 36, 36) 3px solid;
+  border-radius: 10px;
+  resize: none;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 15rem;
+  border: rgb(38, 36, 36) 3px solid;
+  border-radius: 20px;
+  background-color: rgb(233, 251, 151);
+}
 
 /*# sourceMappingURL=style.css.map */
