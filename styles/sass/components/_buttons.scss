@@ -1,0 +1,22 @@
+.keyboard__rows-1 {
+    @extend %rowsSettings;
+}
+.keyboard__rows-2 {
+    @extend %rowsSettings;
+}
+.buttons {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: $color-btn;
+    border: 1px solid $color-letter;
+    border-radius: 6px;
+}
+.keyBackspace {
+    width: 110px;
+}
+.keyTab {
+    width: 60px;
+}

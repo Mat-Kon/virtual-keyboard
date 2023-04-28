@@ -1,12 +1,12 @@
 const createKeyboardContain = () => {
-  const textarea = document.querySelector(".text-window")
-  const keyboard = createElement("div", "keyboard wrapper");
+  const textarea = document.querySelector('.text-window')
+  const keyboard = createElement('div', 'keyboard wrapper');
   textarea.after(keyboard);
 }
 
-const createKeyboardRows = () => {
-  const keyboard = document.querySelector(".keyboard");
-  const rows = createElement("div", "keyboard_rows");
+const createKeyboardRows = (num) => {
+  const keyboard = document.querySelector('.keyboard');
+  const rows = createElement('div', `keyboard__rows-${num}`);
   keyboard.append(rows);
 }
 
