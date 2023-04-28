@@ -1,10 +1,10 @@
-import {rowOne,rowTwo} from './valuesButtons/values.js';
+import {rowOne, rowTwo, rowThree, rowFour} from './valuesButtons/values.js';
 
 export const createButtonsRowOne = (num, eventKey) => {
     const valuesInButtons = rowOne;
     const row = document.querySelector('.keyboard__rows-1');
     const button = document.createElement('div');
-    button.classList.add(`key${valuesInButtons[num].key}`);
+    button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
     button.classList.add('buttons');
     button.textContent = valuesInButtons[num].key;
     row.append(button);
@@ -13,7 +13,25 @@ export const createButtonsRowTwo = (num, eventKey) => {
     const valuesInButtons = rowTwo;
     const row = document.querySelector('.keyboard__rows-2');
     const button = document.createElement('div');
-    button.classList.add(`key${valuesInButtons[num].key}`);
+    button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
+    button.classList.add('buttons');
+    button.textContent = valuesInButtons[num].key;
+    row.append(button);
+};
+export const createButtonsRowThree = (num, eventKey) => {
+    const valuesInButtons = rowThree;
+    const row = document.querySelector('.keyboard__rows-3');
+    const button = document.createElement('div');
+    button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
+    button.classList.add('buttons');
+    button.textContent = valuesInButtons[num].key;
+    row.append(button);
+};
+export const createButtonsRowFour = (num, eventKey) => {
+    const valuesInButtons = rowFour;
+    const row = document.querySelector('.keyboard__rows-4');
+    const button = document.createElement('div');
+    button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
     button.classList.add('buttons');
     button.textContent = valuesInButtons[num].key;
     row.append(button);
