@@ -1,4 +1,4 @@
-import {rowOne, rowTwo, rowThree, rowFour} from './valuesButtons/values.js';
+import {rowOne, rowTwo, rowThree, rowFour, rowFive} from './valuesButtons/values.js';
 
 export const createButtonsRowOne = (num, eventKey) => {
     const valuesInButtons = rowOne;
@@ -30,6 +30,15 @@ export const createButtonsRowThree = (num, eventKey) => {
 export const createButtonsRowFour = (num, eventKey) => {
     const valuesInButtons = rowFour;
     const row = document.querySelector('.keyboard__rows-4');
+    const button = document.createElement('div');
+    button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
+    button.classList.add('buttons');
+    button.textContent = valuesInButtons[num].key;
+    row.append(button);
+};
+export const createButtonsRowFive = (num, eventKey) => {
+    const valuesInButtons = rowFive;
+    const row = document.querySelector('.keyboard__rows-5');
     const button = document.createElement('div');
     button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
     button.classList.add('buttons');

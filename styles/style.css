@@ -1,4 +1,4 @@
-.keyboard__rows-4, .keyboard__rows-3, .keyboard__rows-2, .keyboard__rows-1 {
+.keyboard__rows-5, .keyboard__rows-4, .keyboard__rows-3, .keyboard__rows-2, .keyboard__rows-1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   width: 55%;
   height: 15rem;
   border: rgb(38, 36, 36) 3px solid;
@@ -77,6 +78,10 @@
 
 .key-shift {
   width: 100px;
+}
+
+.key-space {
+  width: 377px;
 }
 
 /*# sourceMappingURL=style.css.map */

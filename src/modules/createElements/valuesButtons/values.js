@@ -233,8 +233,8 @@ export const rowFour = [
 
 export const rowFive = [
   {
-    "key": "Control",
-    "shiftKey": "Control",
+    "key": "Ctrl",
+    "shiftKey": "Ctrl",
   },
   {
     "key": "Win",
@@ -245,8 +245,8 @@ export const rowFive = [
     "shiftKey": "Alt",
   },
   {
-    "key": " ",
-    "shiftKey": " ",
+    "key": "",
+    "shiftKey": "",
   },
   {
     "key": "Alt",
@@ -265,7 +265,7 @@ export const rowFive = [
     "shiftKey": "►",
   },
   {
-    "key": "Control",
-    "shiftKey": "Control",
+    "key": "Ctrl",
+    "shiftKey": "Ctrl",
   },
 ];

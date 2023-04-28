@@ -10,6 +10,9 @@
 .keyboard__rows-4 {
   @extend %rowsSettings;
 }
+.keyboard__rows-5 {
+  @extend %rowsSettings;
+}
 .buttons {
   width: 48px;
   display: flex;
@@ -41,4 +44,7 @@
 }
 .key-shift {
   width: 100px;
+}
+.key-space {
+  width: 377px;
 }
