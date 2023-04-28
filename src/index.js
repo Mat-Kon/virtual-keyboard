@@ -28,6 +28,7 @@ document.addEventListener('keydown', event => {
     };
     for (let i = 0; i < buttonsRowTwo.length; i++) {
       buttonsRowTwo[i].textContent = rowTwo[i].shiftKey;
+      
     };
   };
 });
