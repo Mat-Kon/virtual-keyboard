@@ -3,7 +3,7 @@ import {createTextarea} from './modules/createElements/textarea.js';
 import {createKeyboardContain, createKeyboardRows} from './modules/createElements/keyboardContain.js';
 import {rowOne, rowTwo, rowThree, rowFour, rowFive} from './modules/createElements/valuesButtons/values.js';
 import {createButtonsRowOne, createButtonsRowTwo, createButtonsRowThree, createButtonsRowFour, createButtonsRowFive} from './modules/createElements/buttons.js';
-import {enterValueToMouse} from './modules/keyboardFunctionality/enterToMouse.js';
+import {enterValueToMouse, removeValueToMouse} from './modules/keyboardFunctionality/enterToMouse.js';
 createHeader();
 createTextarea();
 createKeyboardContain();
@@ -51,7 +51,7 @@ const buttonsRowFour = lineFour.childNodes;
 const buttonsRowFive = lineFive.childNodes;
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === "Shift") {
+  if (event.getModifierState("Shift")) {
     for (let i = 0; i < buttonsRowOne.length; i++) {
       buttonsRowOne[i].textContent = valueRowOne[i].shiftKey;
     };
@@ -72,7 +72,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('keyup', (event) => {
-  if (event.key === "Shift") {
+  if (!event.getModifierState("Shift")) {
     for (let i = 0; i < buttonsRowOne.length; i++) {
       buttonsRowOne[i].textContent = valueRowOne[i].key;
     };
@@ -92,6 +92,14 @@ document.addEventListener('keyup', (event) => {
   };
 });
 
-
-//add enter value to click mouse
+//add enter and remove value to click mouse
 enterValueToMouse();
+removeValueToMouse();
+//add enter value to click press keyboard button
+const enterValueToPressButton = () => {
+  const textWindow = document.querySelector('.text-window');
+  document.addEventListener('keydown', (event) => {
+    textWindow.focus();
+  });
+}
+enterValueToPressButton();
