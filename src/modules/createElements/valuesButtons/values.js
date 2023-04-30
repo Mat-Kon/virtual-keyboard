@@ -120,3 +120,152 @@ export const rowTwo = [
     "shiftKey": "Del",
   },
 ];
+
+export const rowThree = [
+  {
+    "key": "CapsLock",
+    "shiftKey": "CapsLock",
+  },
+  {
+    "key": "a",
+    "shiftKey": "A",
+  },
+  {
+    "key": "s",
+    "shiftKey": "S",
+  },
+  {
+    "key": "d",
+    "shiftKey": "D",
+  },
+  {
+    "key": "f",
+    "shiftKey": "F",
+  },
+  {
+    "key": "g",
+    "shiftKey": "G",
+  },
+  {
+    "key": "h",
+    "shiftKey": "H",
+  },
+  {
+    "key": "j",
+    "shiftKey": "J",
+  },
+  {
+    "key": "k",
+    "shiftKey": "K",
+  },
+  {
+    "key": "l",
+    "shiftKey": "L",
+  },
+  {
+    "key": ";",
+    "shiftKey": ":",
+  },
+  {
+    "key": "'",
+    "shiftKey": "\"",
+  },
+  {
+    "key": "Enter",
+    "shiftKey": "Enter",
+  },
+];
+
+export const rowFour = [
+  {
+    "key": "Shift",
+    "shiftKey": "Shift",
+  },
+  {
+    "key": "z",
+    "shiftKey": "Z",
+  },
+  {
+    "key": "x",
+    "shiftKey": "X",
+  },
+  {
+    "key": "c",
+    "shiftKey": "C",
+  },
+  {
+    "key": "v",
+    "shiftKey": "V",
+  },
+  {
+    "key": "b",
+    "shiftKey": "B",
+  },
+  {
+    "key": "n",
+    "shiftKey": "N",
+  },
+  {
+    "key": "m",
+    "shiftKey": "M",
+  },
+  {
+    "key": ",",
+    "shiftKey": "<",
+  },
+  {
+    "key": ".",
+    "shiftKey": ">",
+  },
+  {
+    "key": "/",
+    "shiftKey": "?",
+  },
+  {
+    "key": "▲",
+    "shiftKey": "▲",
+  },
+  {
+    "key": "Shift",
+    "shiftKey": "Shift",
+  },
+];
+
+export const rowFive = [
+  {
+    "key": "Ctrl",
+    "shiftKey": "Ctrl",
+  },
+  {
+    "key": "Win",
+    "shiftKey": "Win",
+  },
+  {
+    "key": "Alt",
+    "shiftKey": "Alt",
+  },
+  {
+    "key": "",
+    "shiftKey": "",
+  },
+  {
+    "key": "Alt",
+    "shiftKey": "Alt",
+  },
+  {
+    "key": "◄",
+    "shiftKey": "◄",
+  },
+  {
+    "key": "▼",
+    "shiftKey": "▼",
+  },
+  {
+    "key": "►",
+    "shiftKey": "►",
+  },
+  {
+    "key": "Ctrl",
+    "shiftKey": "Ctrl",
+  },
+];
