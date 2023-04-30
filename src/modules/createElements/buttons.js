@@ -40,6 +40,12 @@ export const createButtonsRowFive = (num, eventKey) => {
     const valuesInButtons = rowFive;
     const row = document.querySelector('.keyboard__rows-5');
     const button = document.createElement('span');
+    if (num === 0) {
+        button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}-left`);
+    }
+    if (num === valuesInButtons.length - 1) {
+        button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}-right`);
+    }
     button.classList.add(`key-${String(valuesInButtons[num].key).toLowerCase()}`);
     button.classList.add('buttons');
     button.textContent = valuesInButtons[num].key;

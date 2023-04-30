@@ -14,21 +14,16 @@ export const enterValueToMouse = () => {
       }
       textWindow.textContent += valueButton;
     });
-  };
+  }
 
-  export const removeValueToMouse = () => {
+  export const removeValueToMouse = (locationPointer) => {
     const textWindow = document.querySelector('.text-window');
     const keyboard = document.querySelector('.keyboard');
-    textWindow.selectionStart = 0;
-    let textLength = 0;
     keyboard.addEventListener('click', (event) => {
-      let valueButton = event.target.textContent;
-      textLength = textWindow.textContent.length;
-      textWindow.selectionStart = textLength;
-      if (valueButton === 'Backspace' && textWindow.selectionStart === textLength) {
+      const valueButton = event.target.textContent;
+      const textLength = textWindow.textContent.length;
+      if (valueButton === 'Backspace') {
         textWindow.textContent = textWindow.textContent.substring(0, textLength - 1);
-        textLength = textWindow.textContent.length;
-        textWindow.selectionStart = textLength;
-      };
+      }
     });
-  };
+  }

@@ -7,6 +7,14 @@ import {enterValueToMouse, removeValueToMouse} from './modules/keyboardFunctiona
 createHeader();
 createTextarea();
 createKeyboardContain();
+window.onload = () => {
+  //add enter and remove value to click mouse
+  enterValueToMouse();
+  removeValueToMouse();
+  //add enter value to click press keyboard button
+  activePressButton();
+  removePressButton();
+}
 
 //Create rows in keyboard container
 for (let i = 1; i <= 5; i++) {
@@ -32,6 +40,11 @@ for (let i = 0; i< rowFive.length; i++) {
 const spaceButton = document.querySelector('.key-');
 spaceButton.className = 'key-space buttons';
 spaceButton.textContent = ' ';
+const altButtons = document.querySelectorAll('.key-alt');
+const altLeft = altButtons[0];
+altLeft.className = 'key-alt-left buttons';
+const altRight = altButtons[1];
+altRight.className = 'key-alt-right buttons';
 
 //Change value to press key "Shift"
 const valueRowOne = rowOne;
@@ -92,14 +105,66 @@ document.addEventListener('keyup', (event) => {
   };
 });
 
-//add enter and remove value to click mouse
-enterValueToMouse();
-removeValueToMouse();
 //add enter value to click press keyboard button
-const enterValueToPressButton = () => {
-  const textWindow = document.querySelector('.text-window');
+const activePressButton = () => {
+  const allValue = [...buttonsRowOne, ...buttonsRowTwo, ...buttonsRowThree, ...buttonsRowFour, ...buttonsRowFive];
   document.addEventListener('keydown', (event) => {
-    textWindow.focus();
+    if (event.key === "Meta") {
+      document.querySelector('.key-win').classList.add('active');
+    }
+    if (event.code === "ControlLeft") {
+      document.querySelector('.key-ctrl-left').classList.add('active');
+    }
+    if (event.code === "ControlRight") {
+      document.querySelector('.key-ctrl-right').classList.add('active');
+    }
+    if (event.code === "AltLeft") {
+      event.preventDefault();
+      document.querySelector('.key-alt-left').classList.add('active');
+    }
+    if (event.code === "AltRight") {
+      event.preventDefault();
+      document.querySelector('.key-alt-right').classList.add('active');
+    }
+    if (event.key === "Tab") {
+      event.preventDefault();
+    }
+    if (event.key === "Delete") {
+      document.querySelector('.key-del').classList.add('active');
+    }
+    for (let i = 0; i < allValue.length; i++) {
+      if (allValue[i].textContent === event.key) {
+        allValue[i].classList.add('active');
+      }
+    }
   });
 }
-enterValueToPressButton();
+
+const removePressButton = () => {
+  const allValue = [...buttonsRowOne, ...buttonsRowTwo, ...buttonsRowThree, ...buttonsRowFour, ...buttonsRowFive];
+  document.addEventListener('keyup', (event) => {
+    if (event.key === "Meta") {
+      document.querySelector('.key-win').classList.remove('active');
+    }
+    if (event.code === "ControlLeft") {
+      document.querySelector('.key-ctrl-left').classList.remove('active');
+    }
+    if (event.code === "ControlRight") {
+      document.querySelector('.key-ctrl-right').classList.remove('active');
+    }
+    if (event.code === "AltLeft") {
+      document.querySelector('.key-alt-left').classList.remove('active');
+    }
+    if (event.code === "AltRight") {
+      document.querySelector('.key-alt-right').classList.remove('active');
+    }
+    if (event.key === "Delete") {
+      document.querySelector('.key-del').classList.remove('active');
+    }
+    for (let i = 0; i < allValue.length; i++) {
+      if (allValue[i].textContent === event.key) {
+        allValue[i].classList.remove('active');
+      }
+    }
+  });
+}
