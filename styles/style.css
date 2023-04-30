@@ -52,6 +52,7 @@
   border: 1px solid rgb(38, 36, 36);
   border-radius: 6px;
   transition: 0.5s;
+  user-select: none;
 }
 .buttons:hover {
   background-color: aqua;
