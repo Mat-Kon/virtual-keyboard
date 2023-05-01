@@ -1,12 +1,14 @@
 import {createHeader} from './modules/createElements/header.js';
 import {createTextarea} from './modules/createElements/textarea.js';
 import {createKeyboardContain, createKeyboardRows} from './modules/createElements/keyboardContain.js';
+import {createContent} from './modules/createElements/createContent.js'
 import {rowOne, rowTwo, rowThree, rowFour, rowFive} from './modules/createElements/valuesButtons/values.js';
 import {createButtonsRowOne, createButtonsRowTwo, createButtonsRowThree, createButtonsRowFour, createButtonsRowFive} from './modules/createElements/buttons.js';
 import {enterValueToMouse, removeValueToMouse} from './modules/keyboardFunctionality/enterToMouse.js';
 createHeader();
 createTextarea();
 createKeyboardContain();
+createContent();
 window.onload = () => {
   //add enter value to click press keyboard button
   activePressButton();
@@ -101,7 +103,7 @@ document.addEventListener('keyup', (event) => {
   };
 });
 
-//add enter value to click press keyboard button
+//add active value to click press keyboard button
 const activePressButton = () => {
   const allValue = [...buttonsRowOne, ...buttonsRowTwo, ...buttonsRowThree, ...buttonsRowFour, ...buttonsRowFive];
   document.addEventListener('keydown', (event) => {
@@ -139,6 +141,10 @@ const activePressButton = () => {
     }
     if (event.key === 'ArrowRight') {
       document.querySelector('.key-Arrow-right').classList.add('active');
+    }
+    if (event.key === 'CapsLock') {
+      document.querySelector('.key-capslock').classList.toggle('active');
+      capsValue();
     }
     for (let i = 0; i < allValue.length; i++) {
       if (allValue[i].textContent === event.key) {
@@ -181,6 +187,9 @@ const removePressButton = () => {
     if (event.key === 'ArrowRight') {
       document.querySelector('.key-Arrow-right').classList.remove('active');
     }
+    if (event.getModifierState('CapsLock')) {
+      return
+    }
     for (let i = 0; i < allValue.length; i++) {
       if (allValue[i].textContent === event.key) {
         allValue[i].classList.remove('active');
@@ -192,12 +201,11 @@ const removePressButton = () => {
 //enter value in textarea to press keyboard
 const enterValueToPressKeyboard = () => {
   const textWindow = document.querySelector('.text-window');
-  const spaceKey = document.querySelector('.key-space');
   document.addEventListener('keydown', (event) => {
     textWindow.focus();
     if (event.key === "Tab") {
       event.preventDefault();
-      textWindow.textContent += '    ';
+      textWindow.value += '    ';
     }
   });
 }

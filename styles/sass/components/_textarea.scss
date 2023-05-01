@@ -7,4 +7,7 @@
     box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
     resize: none;
     white-space: pre-wrap;
+    &:focus-visible {
+        border: none;
+    }
 }

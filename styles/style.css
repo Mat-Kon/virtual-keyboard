@@ -16,8 +16,12 @@
 }
 
 .heading {
+  width: 450px;
+  padding: 5px;
   text-align: center;
   color: rgb(53, 60, 145);
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
 }
 
 .text-window {
@@ -29,6 +33,9 @@
   box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
   resize: none;
   white-space: pre-wrap;
+}
+.text-window:focus-visible {
+  border: none;
 }
 
 .keyboard {
@@ -43,6 +50,17 @@
   box-shadow: -5px -5px 5px rgb(242, 210, 163), 3px 3px 11px rgb(0, 0, 0);
 }
 
+.information {
+  width: 350px;
+  padding: 5px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(53, 60, 145);
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
+}
+
 .buttons {
   width: 48px;
   display: flex;
@@ -51,7 +69,7 @@
   height: 2rem;
   background-color: rgb(231, 200, 154);
   border-radius: 6px;
-  transition: all 0.5s;
+  transition: all 1s;
   box-shadow: -2px -2px 4px rgb(248, 182, 82), 2px 2px 4px rgb(122, 71, 8);
   user-select: none;
 }

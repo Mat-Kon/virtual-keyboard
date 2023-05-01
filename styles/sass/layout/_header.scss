@@ -1,4 +1,8 @@
 .heading {
+    width: 450px;
+    padding: 5px;
     text-align: center;
     color: $color-content;
+    border-radius: 10px;
+    box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
 }

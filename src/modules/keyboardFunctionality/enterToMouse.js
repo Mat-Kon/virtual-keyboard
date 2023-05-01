@@ -4,26 +4,26 @@ export const enterValueToMouse = () => {
     keyboard.addEventListener('click', (event) => {
       let valueButton = event.target.textContent;
       if (valueButton === 'Tab') {
-        textWindow.textContent += '    ';
+        textWindow.value += '    ';
       }
       if (valueButton === 'Enter') {
-        textWindow.innerHTML += '\n';
+        textWindow.value += '\n';
       }
       if (valueButton.length > 1) {
         return;
       }
-      textWindow.textContent += valueButton;
+      textWindow.value += valueButton;
     });
   }
 
-  export const removeValueToMouse = (locationPointer) => {
+  export const removeValueToMouse = () => {
     const textWindow = document.querySelector('.text-window');
     const keyboard = document.querySelector('.keyboard');
     keyboard.addEventListener('click', (event) => {
       const valueButton = event.target.textContent;
-      const textLength = textWindow.textContent.length;
+      const textLength = textWindow.value.length;
       if (valueButton === 'Backspace') {
-        textWindow.textContent = textWindow.textContent.substring(0, textLength - 1);
+        textWindow.value = textWindow.value.substring(0, textLength - 1);
       }
     });
   }
