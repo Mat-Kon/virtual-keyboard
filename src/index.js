@@ -14,7 +14,6 @@ window.onload = () => {
   //add enter and remove value to click mouse
   enterValueToMouse();
   removeValueToMouse();
-
   enterValueToPressKeyboard();
 }
 
