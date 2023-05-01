@@ -1,5 +1,5 @@
 export const enterValueToMouse = () => {
-    const textWindow = document.querySelector('.text-window');
+    const textWindow = document.querySelector('textarea');
     const keyboard = document.querySelector('.keyboard');
     keyboard.addEventListener('click', (event) => {
       let valueButton = event.target.textContent;

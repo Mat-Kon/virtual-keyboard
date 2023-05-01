@@ -8,12 +8,14 @@ createHeader();
 createTextarea();
 createKeyboardContain();
 window.onload = () => {
-  //add enter and remove value to click mouse
-  enterValueToMouse();
-  removeValueToMouse();
   //add enter value to click press keyboard button
   activePressButton();
   removePressButton();
+  //add enter and remove value to click mouse
+  enterValueToMouse();
+  removeValueToMouse();
+
+  enterValueToPressKeyboard();
 }
 
 //Create rows in keyboard container
@@ -40,11 +42,6 @@ for (let i = 0; i< rowFive.length; i++) {
 const spaceButton = document.querySelector('.key-');
 spaceButton.className = 'key-space buttons';
 spaceButton.textContent = ' ';
-const altButtons = document.querySelectorAll('.key-alt');
-const altLeft = altButtons[0];
-altLeft.className = 'key-alt-left buttons';
-const altRight = altButtons[1];
-altRight.className = 'key-alt-right buttons';
 
 //Change value to press key "Shift"
 const valueRowOne = rowOne;
@@ -120,17 +117,29 @@ const activePressButton = () => {
     }
     if (event.code === "AltLeft") {
       event.preventDefault();
-      document.querySelector('.key-alt-left').classList.add('active');
+      return document.querySelector('.key-alt-left').classList.add('active');
     }
     if (event.code === "AltRight") {
       event.preventDefault();
-      document.querySelector('.key-alt-right').classList.add('active');
+      return document.querySelector('.key-alt-right').classList.add('active');
     }
     if (event.key === "Tab") {
       event.preventDefault();
     }
     if (event.key === "Delete") {
       document.querySelector('.key-del').classList.add('active');
+    }
+    if (event.key === 'ArrowUp') {
+      document.querySelector('.key-Arrow-up').classList.add('active');
+    }
+    if (event.key === 'ArrowDown') {
+      document.querySelector('.key-Arrow-down').classList.add('active');
+    }
+    if (event.key === 'ArrowLeft') {
+      document.querySelector('.key-Arrow-left').classList.add('active');
+    }
+    if (event.key === 'ArrowRight') {
+      document.querySelector('.key-Arrow-right').classList.add('active');
     }
     for (let i = 0; i < allValue.length; i++) {
       if (allValue[i].textContent === event.key) {
@@ -161,10 +170,35 @@ const removePressButton = () => {
     if (event.key === "Delete") {
       document.querySelector('.key-del').classList.remove('active');
     }
+    if (event.key === 'ArrowUp') {
+      document.querySelector('.key-Arrow-up').classList.remove('active');
+    }
+    if (event.key === 'ArrowDown') {
+      document.querySelector('.key-Arrow-down').classList.remove('active');
+    }
+    if (event.key === 'ArrowLeft') {
+      document.querySelector('.key-Arrow-left').classList.remove('active');
+    }
+    if (event.key === 'ArrowRight') {
+      document.querySelector('.key-Arrow-right').classList.remove('active');
+    }
     for (let i = 0; i < allValue.length; i++) {
       if (allValue[i].textContent === event.key) {
         allValue[i].classList.remove('active');
       }
+    }
+  });
+}
+
+//enter value in textarea to press keyboard
+const enterValueToPressKeyboard = () => {
+  const textWindow = document.querySelector('.text-window');
+  const spaceKey = document.querySelector('.key-space');
+  document.addEventListener('keydown', (event) => {
+    textWindow.focus();
+    if (event.key === "Tab") {
+      event.preventDefault();
+      textWindow.textContent += '    ';
     }
   });
 }

@@ -24,10 +24,11 @@
   width: 50%;
   min-height: 15rem;
   margin: 2rem auto;
-  border: rgb(38, 36, 36) 3px solid;
+  border: none;
   border-radius: 10px;
-  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px rgb(0, 0, 0);
+  box-shadow: -2px -2px 4px rgb(235, 232, 232), 2px 2px 4px rgb(65, 64, 64);
   resize: none;
+  white-space: pre-wrap;
 }
 
 .keyboard {
@@ -37,7 +38,6 @@
   justify-content: space-evenly;
   width: 55%;
   height: 15rem;
-  border: rgb(38, 36, 36) 3px solid;
   border-radius: 20px;
   background-color: rgb(226, 126, 3);
   box-shadow: -5px -5px 5px rgb(242, 210, 163), 3px 3px 11px rgb(0, 0, 0);
@@ -50,10 +50,9 @@
   align-items: center;
   height: 2rem;
   background-color: rgb(231, 200, 154);
-  border: 1px solid rgb(38, 36, 36);
   border-radius: 6px;
-  transition: 0.5s;
-  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px rgb(0, 0, 0);
+  transition: all 0.5s;
+  box-shadow: -2px -2px 4px rgb(248, 182, 82), 2px 2px 4px rgb(122, 71, 8);
   user-select: none;
 }
 .buttons:hover {
@@ -61,12 +60,10 @@
 }
 .buttons:active {
   background-color: rgb(243, 89, 62);
-  border-radius: 100px;
   box-shadow: none;
 }
 .buttons.active {
   background-color: rgb(243, 89, 62);
-  border-radius: 100px;
   box-shadow: none;
 }
 
