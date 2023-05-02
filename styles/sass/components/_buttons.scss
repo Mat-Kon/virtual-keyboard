@@ -20,23 +20,20 @@
   align-items: center;
   height: 2rem;
   background-color: $color-btn;
-  border: 1px solid $color-letter;
   border-radius: 6px;
-  transition: 0.5s;
-  box-shadow: -2px -2px 4px rgb(63, 63, 63), 2px 2px 4px rgb(0, 0, 0);
+  transition: all 1s;
+  box-shadow: -2px -2px 4px rgb(248, 182, 82), 2px 2px 4px rgb(122, 71, 8) ;
   user-select: none;
   &:hover {
     opacity: 0.8;
   }
   &:active {
     background-color: rgb(243, 89, 62);
-    border-radius: 100px;
     box-shadow: none;
 
   }
   &.active {
     background-color: rgb(243, 89, 62);
-    border-radius: 100px;
     box-shadow: none;
   }
 }

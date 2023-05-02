@@ -66,42 +66,52 @@ export const rowTwo = [
   {
     "key": "q",
     "shiftKey": "Q",
+    "capsKey": "Q",
   },
   {
     "key": "w",
     "shiftKey": "W",
+    "capsKey": "W",
   },
   {
     "key": "e",
     "shiftKey": "E",
+    "capsKey": "E",
   },
   {
     "key": "r",
     "shiftKey": "R",
+    "capsKey": "R",
   },
   {
     "key": "t",
     "shiftKey": "T",
+    "capsKey": "T",
   },
   {
     "key": "y",
     "shiftKey": "Y",
+    "capsKey": "Y",
   },
   {
     "key": "u",
     "shiftKey": "U",
+    "capsKey": "U",
   },
   {
     "key": "i",
     "shiftKey": "I",
+    "capsKey": "I",
   },
   {
     "key": "o",
     "shiftKey": "O",
+    "capsKey": "O",
   },
   {
     "key": "p",
     "shiftKey": "P",
+    "capsKey": "P",
   },
   {
     "key": "[",
@@ -129,38 +139,47 @@ export const rowThree = [
   {
     "key": "a",
     "shiftKey": "A",
+    "capsKey": "A",
   },
   {
     "key": "s",
     "shiftKey": "S",
+    "capsKey": "S",
   },
   {
     "key": "d",
     "shiftKey": "D",
+    "capsKey": "D",
   },
   {
     "key": "f",
     "shiftKey": "F",
+    "capsKey": "F",
   },
   {
     "key": "g",
     "shiftKey": "G",
+    "capsKey": "G",
   },
   {
     "key": "h",
     "shiftKey": "H",
+    "capsKey": "H",
   },
   {
     "key": "j",
     "shiftKey": "J",
+    "capsKey": "J",
   },
   {
     "key": "k",
     "shiftKey": "K",
+    "capsKey": "K",
   },
   {
     "key": "l",
     "shiftKey": "L",
+    "capsKey": "L",
   },
   {
     "key": ";",
@@ -184,30 +203,37 @@ export const rowFour = [
   {
     "key": "z",
     "shiftKey": "Z",
+    "capsKey": "Z",
   },
   {
     "key": "x",
     "shiftKey": "X",
+    "capsKey": "X",
   },
   {
     "key": "c",
     "shiftKey": "C",
+    "capsKey": "C",
   },
   {
     "key": "v",
     "shiftKey": "V",
+    "capsKey": "V",
   },
   {
     "key": "b",
     "shiftKey": "B",
+    "capsKey": "B",
   },
   {
     "key": "n",
     "shiftKey": "N",
+    "capsKey": "N",
   },
   {
     "key": "m",
     "shiftKey": "M",
+    "capsKey": "M",
   },
   {
     "key": ",",
