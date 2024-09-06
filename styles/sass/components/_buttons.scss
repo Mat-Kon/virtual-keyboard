@@ -1,0 +1,57 @@
+.keyboard__rows-1 {
+  @extend %rowsSettings;
+}
+.keyboard__rows-2 {
+  @extend %rowsSettings;
+}
+.keyboard__rows-3 {
+  @extend %rowsSettings;
+}
+.keyboard__rows-4 {
+  @extend %rowsSettings;
+}
+.keyboard__rows-5 {
+  @extend %rowsSettings;
+}
+.buttons {
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  background-color: $color-btn;
+  border-radius: 6px;
+  transition: all 1s;
+  box-shadow: -2px -2px 4px rgb(248, 182, 82), 2px 2px 4px rgb(122, 71, 8) ;
+  user-select: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    background-color: rgb(243, 89, 62);
+    box-shadow: none;
+
+  }
+  &.active {
+    background-color: rgb(243, 89, 62);
+    box-shadow: none;
+  }
+}
+.key-backspace {
+  width: 110px;
+}
+.key-tab {
+  width: 55px;
+}
+.key-capslock {
+  width: 100px;
+}
+.key-enter {
+  width: 100px;
+}
+.key-shift {
+  width: 100px;
+}
+.key-space {
+  width: 377px;
+}
